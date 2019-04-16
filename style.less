@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    box-shadow: inset 0 0 0 1px green;
+    // box-shadow: inset 0 0 0 1px green;
     font-family: 'Montserrat Alternates', sans-serif;
 }
 
@@ -11,11 +11,44 @@ body {
     line-height: 1.5;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
     font-size: 16px;
+    background-color: #c9bdbd;
 }
 
 
 header {
     border-right: 1px solid gray;
+    
+
+
+    .search {
+        :first-child{
+            background-image: url("loupe.png");
+            background-size: 20px;
+            background-repeat: no-repeat;
+            background-position: 8px 8px;
+        }
+
+        input {
+            outline: none;
+            margin: 12px 2px 5px 10px;
+            width: 160px;
+            height: 32px;
+            border-radius: 9px;
+            background-color: #f5f0f0;
+            font-family: inherit;
+            padding: 10px 0px 0px 30px;
+            border-style: none;
+            opacity: 0.7;
+            &:focus{
+                width: 250px;
+                transition: all 170ms ease-out;
+                
+            }
+
+
+
+        }
+    }
 
     .users {
         .user {
@@ -59,7 +92,8 @@ section {
             justify-content: space-around;
             font-size: 20px;
         }
-        span{
+
+        span {
             border: 1px solid black;
         }
     }
@@ -102,18 +136,18 @@ section {
             border-top-right-radius: 16px;
             border-bottom-right-radius: 16px;
 
-           &:active {
+            &:active {
                 margin-top: 5px;
                 box-shadow: 0 2px 0 0 #ada6a6;
             }
-            &:hover{
-                background-color: red()
 
-            }
+            &:hover {}
 
         }
     }
 }
+
+
 
 .chat-body {
     display: grid;

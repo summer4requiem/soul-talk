@@ -1,6 +1,5 @@
 * {
   box-sizing: border-box;
-  box-shadow: inset 0 0 0 1px green;
   font-family: 'Montserrat Alternates', sans-serif;
 }
 html,
@@ -10,9 +9,32 @@ body {
   line-height: 1.5;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
   font-size: 16px;
+  background-color: #c9bdbd;
 }
 header {
   border-right: 1px solid gray;
+}
+header .search :first-child {
+  background-image: url("loupe.png");
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: 8px 8px;
+}
+header .search input {
+  outline: none;
+  margin: 12px 2px 5px 10px;
+  width: 160px;
+  height: 32px;
+  border-radius: 9px;
+  background-color: #f5f0f0;
+  font-family: inherit;
+  padding: 10px 0px 0px 30px;
+  border-style: none;
+  opacity: 0.7;
+}
+header .search input:focus {
+  width: 250px;
+  transition: all 170ms ease-out;
 }
 header .users .user {
   display: block;
@@ -44,6 +66,9 @@ section .chat-container .message-container {
   display: flex;
   justify-content: space-around;
   font-size: 20px;
+}
+section .chat-container span {
+  border: 1px solid black;
 }
 section .chatting {
   display: flex;
@@ -84,9 +109,6 @@ section .chatting button {
 section .chatting button:active {
   margin-top: 5px;
   box-shadow: 0 2px 0 0 #ada6a6;
-}
-section .chatting button:hover {
-  background-color: #ebe4e 4e;
 }
 .chat-body {
   display: grid;
