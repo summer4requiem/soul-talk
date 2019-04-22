@@ -10,14 +10,15 @@
 </head>
 
 <body>
-    <div class="chat-body">
+ <div class="chat-body">
+     
         <header>
             <div class="search">
-               <input type="text">
+                <input type="text">
             </div>
             <div class="users">
                 <label class="user">
-                    <input type="radio" name="users" class="visually-hidden">
+                    <input type="radio" name="users" class="visually-hidden" placeholder="Search">
                     <div class="flex">
                         <span>Agata Ageeva</span>
                         <span>10:47</span>
@@ -51,23 +52,30 @@
                         <span>02:12</span>
                     </div>
                 </label>
-                </div>
-                </header>
+            </div>
+        </header>
         <section>
             <div class="chat-container">
                 <div class="message-container">
-                    <span>Hi ,folks ! </span>
-                    <span>11/04/19</span>
+                    <div class="incoming-m">
+                        <span>Привет </span>
+                        <span class>12:10 am</span>
+                    </div>
+                    <div class="outgoing-m">
+                        <span>Здарово</span>
+                        <span class >12:11 am</span>
+                    </div>
                 </div>
             </div>
             <div class="chatting">
-               <div class="am-chat" contenteditable="true" role="textbox">
-               </div>
-              <button>
-                   отправить
+                <div class="am-chat" contenteditable="true" role="textbox">
+                </div>
+                <button>
+                    отправить
                 </button>
             </div>
         </section>
+    </div>
 </body>
 
 </html>

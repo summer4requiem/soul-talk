@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
-    // box-shadow: inset 0 0 0 1px green;
     font-family: 'Montserrat Alternates', sans-serif;
+    box-shadow: 0 0 0 1px lawngreen;
 }
 
 html,
@@ -17,64 +17,58 @@ body {
 
 header {
     border-right: 1px solid gray;
-    
-
 
     .search {
-        :first-child{
-            background-image: url("loupe.png");
-            background-size: 20px;
-            background-repeat: no-repeat;
-            background-position: 8px 8px;
+        background-image: url("loupe1.svg");
+        background-size: 20px;
+        background-repeat: no-repeat;
+        background-position: 15px 18px;
+    }
+
+    input {
+        outline: none;
+        margin: 12px 2px 5px 10px;
+        width: 160px;
+        height: 32px;
+        border-radius: 9px;
+        background-color: #f5f0f0;
+        font-family: inherit;
+        padding: 10px 0px 0px 30px;
+        border-style: none;
+        opacity: 0.7;
+
+        &:focus {
+            width: 250px;
+            transition: all 170ms ease-out;
         }
+    }
+}
+
+.users {
+    .user {
+        display: block;
 
         input {
-            outline: none;
-            margin: 12px 2px 5px 10px;
-            width: 160px;
-            height: 32px;
-            border-radius: 9px;
-            background-color: #f5f0f0;
-            font-family: inherit;
-            padding: 10px 0px 0px 30px;
-            border-style: none;
-            opacity: 0.7;
-            &:focus{
-                width: 250px;
-                transition: all 170ms ease-out;
-                
+            &:checked+.flex {
+                background-color: #a2b9bc;
+                border-bottom: 1px solid gray;
             }
-
-
-
         }
     }
 
-    .users {
-        .user {
-            display: block;
+    .flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
-            input:checked+.flex {
-                background-color: #ebe4e4;
-                border-bottom: 1px solid gray;
-            }
-
-            .flex {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-
-                span {
-                    padding: 12px 16px;
-                    overflow: hidden;
-                    white-space: nowrap;
-                    text-overflow: ellipsis;
-                    max-width: 70%;
-
-                    +span {
-                        font-size: 12px;
-                    }
-                }
+        span {
+            padding: 12px 16px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            max-width: 70%;
+              + span {
+                font-size: 10px;
             }
         }
     }
@@ -84,17 +78,35 @@ section {
     display: grid;
     grid-template-rows: 1fr 100px;
 
-
     .chat-container {
-
+		background-color: #f5f0f0;
+		margin: 21px 141px 6px 161px;
+		box-shadow: -1px 7px 11px -10px black;
+		border-radius: 18px;
+		padding: 7px 10px 11px 21px;
         .message-container {
-            display: flex;
-            justify-content: space-around;
-            font-size: 20px;
-        }
+            display: grid;
+            grid-template-rows: 50px 50px;
+            font-size: 17px;
 
-        span {
-            border: 1px solid black;
+            .incoming-m {
+                span {
+                    position: relative;
+                    top: 25px;
+                    left: 5px;
+                }
+            }
+            .outgoing-m {
+                span {
+                    position: relative;
+                    top: 25px;
+                    left: 5px;
+                }
+            }
+		}
+
+        span+span {
+            font-size: 10px;
         }
     }
 
@@ -119,7 +131,6 @@ section {
             background-color: #f5f0f0;
             margin: 9px 129px 9px 168px;
             box-shadow: -1px 7px 11px -10px black;
-
         }
 
         button {
@@ -140,14 +151,9 @@ section {
                 margin-top: 5px;
                 box-shadow: 0 2px 0 0 #ada6a6;
             }
-
-            &:hover {}
-
         }
     }
 }
-
-
 
 .chat-body {
     display: grid;
@@ -164,6 +170,4 @@ section {
     height: 1px !important;
     width: 1px !important;
     overflow: hidden;
-
-
 }
