@@ -10,11 +10,15 @@
 </head>
 
 <body>
- <div class="chat-body">
-     
+    <div class="chat-body">
+
         <header>
             <div class="search">
-                <input type="text">
+                <input type="text" placeholder="Searсh">
+                <div class="write_a_message-pic">
+                    <a href class="write_a_message-pic">
+                         </a>
+                </div>
             </div>
             <div class="users">
                 <label class="user">
@@ -58,29 +62,30 @@
             <div class="chat-container">
                 <div class="message-container">
                     <div class="incoming-m">
-                        <div class="content" >
-                        <span>Привет </span>
-                        <span >12:10 am</span>
+                        <div class="content">
+                            <span class="text">Привет </span>
+                            <span class="time-date">12:10 am</span>
+                        </div>
                     </div>
-                    </div>
-                    <div>
+
                     <div class="outgoing-m">
                         <div class="content">
-                        <span>Здарово</span>
-                        <span >12:11 am</span>
+                            <span class="text">Здарово</span>
+                            <span class="time-date">12:11 am</span>
+                        </div>
                     </div>
-                    </div>
-                </div>
                 </div>
             </div>
 
             <div class="chatting">
                 <div class="am-chat" contenteditable="true" role="textbox" >
                 </div>
-                <button>
-                    отправить
-                </button>
             </div>
+
+            <button>
+                отправить
+            </button>
+
         </section>
     </div>
 </body>
