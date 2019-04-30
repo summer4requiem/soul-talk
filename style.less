@@ -26,13 +26,8 @@ header {
         background-size: 20px;
         background-repeat: no-repeat;
         background-position: 15px 18px;
-        
-
 
         .write_a_message-pic {
-          
-
-
             a {
                 display: block;
                 background-image: url("pencil.svg");
@@ -44,7 +39,6 @@ header {
                 opacity: 0.4;
             }
         }
-
     }
 
 
@@ -77,9 +71,11 @@ header {
         display: block;
 
         input {
-            &:checked+.flex {
+            &:hover+.flex {
                 background-color: #a2b9bc;
                 border-bottom: 1px solid gray;
+                color: white;
+                text-shadow: 1px 0 gray;
             }
         }
     }
@@ -175,7 +171,7 @@ section {
             border-radius: 16px;
             max-height: 220px;
             height: 55px;
-            border: solid 1px #d3d9d;
+            // border: solid 1px #d3d9d;
             line-height: 17px;
             word-wrap: break-word;
             overflow-y: auto;
@@ -212,13 +208,74 @@ section {
             box-shadow: 0 2px 0 0 #ada6a6;
         }
 
-
-
     }
 
 }
 
+.services {
+    position: absolute;
+    bottom: 0;
 
+    .top-menu {
+        
+        padding: 0;
+        margin: 0 0 10px 0;
+        
+        width: 180px;
+
+        li {
+            display: block;
+            padding: 0;
+            margin: 0;
+
+            .topmenu-link {
+               
+                padding: 0;
+                display: block;
+                background-image: url("settings.svg");
+                background-size: 40px;
+                background-repeat: no-repeat;
+                background-position: 1px 0px;
+                width: 40px;
+                height: 40px;
+
+            }
+        }
+    }
+
+    .submenu {
+        font-style: oblique;
+        text-transform: uppercase;
+        font-size: 14px;
+        padding: 0;
+        margin: 0 0 0 5px;
+
+        li {
+            display: block;
+            padding: 5px 0 5px 0;
+            list-style: none;
+
+
+            .submenu-link {
+                margin-bottom: -1px;
+                border:1px solid fade(black,10%);
+                text-decoration: none;
+                display: block;
+                color: black;
+                padding: 0 0 0 0;
+                &:hover{
+                    text-shadow: 1px 0 gray;
+                    background-color: #a2b9bc;
+                    color: white;
+                }
+
+
+
+            }
+        }
+
+    }
+}
 
 .chat-body {
     display: grid;
