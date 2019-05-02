@@ -12,9 +12,7 @@ body {
     font-family: sans-serif;
     font-size: 16px;
     background-color: #c9bdbd;
-
 }
-
 
 header {
     border-right: 1px solid gray;
@@ -41,7 +39,6 @@ header {
         }
     }
 
-
     input {
         outline: none;
         margin: 12px 2px 5px 10px;
@@ -51,11 +48,9 @@ header {
         background-color: #f5f0f0;
         font-family: inherit;
         padding: 6px 0 3px 37px;
-
         border-style: none;
         opacity: 0.7;
         font-size: 12px;
-
 
         &:focus {
             width: 250px;
@@ -64,7 +59,6 @@ header {
         }
     }
 }
-
 
 .users {
     .user {
@@ -111,18 +105,13 @@ section {
         padding: 7px 10px 11px 21px;
 
         .message-container {
-            display: grid;
-            grid-template-rows: 50px 50px;
-            font-size: 17px;
+            font-size: 15px;
 
             .incoming-m {
-                padding: 20px;
-
-
-
                 .content {
-
                     max-width: 70%;
+                    padding: 20px;
+                    word-wrap: break-word;
 
                     .text {
                         display: inline-block;
@@ -134,19 +123,14 @@ section {
             .outgoing-m {
                 text-align: right;
 
-
-
                 .content {
-                    width: 70%;
-
-                    margin-left: 30%;
+                    display: inline-block;
                     max-width: 70%;
-
+                    padding: 20px;
+                    word-wrap: break-word;
                 }
 
-                text {
-                    padding: 0 10px 0 0;
-                }
+                text {}
 
                 .time-date {
                     padding: 0 0 0 10px;
@@ -179,7 +163,7 @@ section {
             padding: 12px 0 0 15px;
             outline: none;
             background-color: #f5f0f0;
-            margin: 9px 129px 9px 168px;
+            margin: 9px 143px 9px 162px;
             box-shadow: -1px 7px 11px -10px black;
 
             @media screen and (max-width: 234px) {
@@ -190,7 +174,7 @@ section {
 
     button {
         position: absolute;
-        right: 129px;
+        right: 143px;
         bottom: 36px;
         box-shadow: -2px 1px 5px -5px black;
         padding: 20px 16px;
@@ -207,9 +191,7 @@ section {
             margin-top: 5px;
             box-shadow: 0 2px 0 0 #ada6a6;
         }
-
     }
-
 }
 
 .services {
@@ -217,10 +199,8 @@ section {
     bottom: 0;
 
     .top-menu {
-        
         padding: 0;
         margin: 0 0 10px 0;
-        
         width: 180px;
 
         li {
@@ -229,7 +209,6 @@ section {
             margin: 0;
 
             .topmenu-link {
-               
                 padding: 0;
                 display: block;
                 background-image: url("settings.svg");
@@ -238,44 +217,35 @@ section {
                 background-position: 1px 0px;
                 width: 40px;
                 height: 40px;
-
             }
         }
     }
 
     .submenu {
-        font-style: oblique;
+
+        position: absolute;
+        bottom: 55px;
         text-transform: uppercase;
-        font-size: 14px;
-        padding: 0;
-        margin: 0 0 0 5px;
 
-        li {
-            display: block;
-            padding: 5px 0 5px 0;
-            list-style: none;
-
-
-            .submenu-link {
-                margin-bottom: -1px;
-                border:1px solid fade(black,10%);
-                text-decoration: none;
-                display: block;
-                color: black;
-                padding: 0 0 0 0;
-                &:hover{
-                    text-shadow: 1px 0 gray;
-                    background-color: #a2b9bc;
-                    color: white;
-                }
+        button {
+            background-color: #a2b9bc;
+            padding: 5px 40px;
+            margin-bottom: 8px;
+            cursor: pointer;
+            border-style: none;
+            width: 150px;
 
 
+            &:hover {
+                text-shadow: 1px 0 gray;
 
+                color: white;
             }
         }
-
     }
+
 }
+
 
 .chat-body {
     display: grid;

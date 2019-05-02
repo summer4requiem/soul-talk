@@ -87,15 +87,12 @@ section .chat-container {
   padding: 7px 10px 11px 21px;
 }
 section .chat-container .message-container {
-  display: grid;
-  grid-template-rows: 50px 50px;
-  font-size: 17px;
-}
-section .chat-container .message-container .incoming-m {
-  padding: 20px;
+  font-size: 15px;
 }
 section .chat-container .message-container .incoming-m .content {
   max-width: 70%;
+  padding: 20px;
+  word-wrap: break-word;
 }
 section .chat-container .message-container .incoming-m .content .text {
   display: inline-block;
@@ -105,12 +102,10 @@ section .chat-container .message-container .outgoing-m {
   text-align: right;
 }
 section .chat-container .message-container .outgoing-m .content {
-  width: 70%;
-  margin-left: 30%;
+  display: inline-block;
   max-width: 70%;
-}
-section .chat-container .message-container .outgoing-m text {
-  padding: 0 10px 0 0;
+  padding: 20px;
+  word-wrap: break-word;
 }
 section .chat-container .message-container .outgoing-m .time-date {
   padding: 0 0 0 10px;
@@ -136,7 +131,7 @@ section .chatting .am-chat {
   padding: 12px 0 0 15px;
   outline: none;
   background-color: #f5f0f0;
-  margin: 9px 129px 9px 168px;
+  margin: 9px 143px 9px 162px;
   box-shadow: -1px 7px 11px -10px black;
 }
 @media screen and (max-width: 234px) {
@@ -146,7 +141,7 @@ section .chatting .am-chat {
 }
 section button {
   position: absolute;
-  right: 129px;
+  right: 143px;
   bottom: 36px;
   box-shadow: -2px 1px 5px -5px black;
   padding: 20px 16px;
@@ -188,28 +183,20 @@ section button:active {
   height: 40px;
 }
 .services .submenu {
-  font-style: oblique;
+  position: absolute;
+  bottom: 55px;
   text-transform: uppercase;
-  font-size: 14px;
-  padding: 0;
-  margin: 0 0 0 5px;
 }
-.services .submenu li {
-  display: block;
-  padding: 5px 0 5px 0;
-  list-style: none;
-}
-.services .submenu li .submenu-link {
-  margin-bottom: -1px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  text-decoration: none;
-  display: block;
-  color: black;
-  padding: 0 0 0 0;
-}
-.services .submenu li .submenu-link:hover {
-  text-shadow: 1px 0 gray;
+.services .submenu button {
   background-color: #a2b9bc;
+  padding: 5px 40px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  border-style: none;
+  width: 150px;
+}
+.services .submenu button:hover {
+  text-shadow: 1px 0 gray;
   color: white;
 }
 .chat-body {
