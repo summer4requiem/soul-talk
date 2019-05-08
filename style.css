@@ -148,8 +148,7 @@ section button {
   background: #f5f0f0;
   font-weight: 600;
   cursor: pointer;
-  outline: 0 !important;
-  opacity: 0.8;
+  outline: none;
   border-top-right-radius: 16px;
   border-bottom-right-radius: 16px;
   border-style: none;
